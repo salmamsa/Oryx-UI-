@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.body-section {
+  max-width: 100%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+/* .logo-container {
+  flex-grow: 1;
+} */
+
+.header-buttons {
+  display: flex;
+  gap: 20px;
+  padding-right: 30px;
+}
+
+.enter-prompt {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-left: -100px; /* Shift left */
+  color: #333; /* Grey text color */
+  flex-grow: 1; /* Take up remaining space */
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-selection {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 70px 0px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  width: 300px;
+  padding: 20px;
+  background-color: #808080; /* Grey background color */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-box h2 {
+  margin-top: 0;
+}
+
+.service-box:hover,.back-button:hover {
+  background-color: #666666; /* Darker grey on hover */
+  transition: background 0.3s;
+}
+
+.reset-button:hover, .send-button:hover {
+  background-color: #b9b9b9;
+  transition: background 0.3s;
+}
+
+.reset-button, .back-button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: gainsboro;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+}
+
+.reset-button img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.message-container {
+  width: 100%;
+  max-width: 800px;
+  min-height: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  display: none; /* Initially hidden */
+  margin-top: 1px; /*Move the container up */
+}
+
+.message-display {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.user-message {
+  color: rgb(75, 75, 75);
+  font-size: 16px;
+  padding-bottom: 20px;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.bot-reply {
+  padding-bottom: 20px;
+  color: black;
+  font-size: 16px;
+}
+
+.chat-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 800px;
+  display: none; /* Initially hidden */
+}
+
+.chat-input {
+  width: calc(100% - 50px);
+  padding: 15px;
+  padding-right: 50px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 2px 1px 2.5px rgba(0, 0, 0, 0.5);
+}
+
+.send-button {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: none;
+}
+
+.send-button img {
+  width: 25px;
+  vertical-align: middle;
+}
+
+.autocomplete-suggestions {
+  border-radius: 8px;
+  max-height: 100px;
+  overflow-y: auto;
+  position: absolute;
+  top: calc(100% - 0px);
+  left: 15px;
+  width: 90%;
+  background-color: rgb(246, 245, 245);
+  z-index: 1;
+}
+
+.autocomplete-suggestion {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.autocomplete-suggestion:hover {
+  background-color: rgb(208, 208, 208);
+}
+
+@media (max-width: 600px) {
+  .service-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+}
